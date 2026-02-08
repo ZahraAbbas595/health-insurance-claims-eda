@@ -50,7 +50,7 @@ The focus of this project is on analytical reasoning, transparency, and professi
 
 4. Update the file path in the notebook if required:
 
-df = pd.read_csv("health_insurance_claims.csv")
+  ### df = pd.read_csv("health_insurance_claims.csv")
 --
 
 ## Methodology
@@ -153,5 +153,7 @@ The analysis follows a structured and transparent workflow:
 
 ## Author
 Zahra Abbas
+
 Data Science Undergraduate
+
 Aspiring Data Analyst
