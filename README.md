@@ -1,170 +1,159 @@
-🏥 Health Insurance Claims Analysis (EDA Project)
-📌 Project Overview
+# Health Insurance Claims Analysis (EDA Project)
 
-This project presents an end-to-end exploratory data analysis (EDA) of a health insurance claims dataset. The goal is to demonstrate a structured analytical workflow — from data understanding and validation to exploratory analysis, interpretation, and documentation — using a controlled, high-quality dataset.
+## Project Overview
 
-The project emphasizes analytical discipline, transparent reasoning, and professional reporting rather than aggressive data cleaning or predictive modeling.
+This project presents an end-to-end exploratory data analysis (EDA) of a health insurance claims dataset. The objective is to demonstrate a structured and disciplined analytical workflow — from data understanding and validation to exploratory analysis, interpretation, and documentation — using a controlled, high-quality dataset.
 
-🎯 Objectives
+The focus of this project is on analytical reasoning, transparency, and professional reporting rather than extensive data cleaning or predictive modeling.
 
-Understand the structure and characteristics of health insurance claims data
+---
 
-Perform a comprehensive data quality audit
+## Objectives
 
-Explore claim cost behavior, demographics, claim types, and temporal trends
+- Understand the structure and characteristics of health insurance claims data  
+- Perform a comprehensive data quality assessment  
+- Explore claim cost behavior, demographics, claim types, and temporal trends  
+- Interpret findings from a business and insurance analytics perspective  
+- Clearly communicate the limitations of synthetic and balanced data  
 
-Interpret findings from a business and insurance analytics perspective
+---
 
-Clearly communicate limitations of synthetic and balanced data
+## Dataset Description
 
-📂 Dataset Description
+- **Source:** Kaggle (Synthetic Health Insurance Claims Dataset)  
+  https://www.kaggle.com/datasets/leandrenash/enhanced-health-insurance-claims-dataset
 
-Source: Kaggle (synthetic health insurance claims dataset)  https://www.kaggle.com/datasets/leandrenash/enhanced-health-insurance-claims-dataset?utm_source=chatgpt.com 
+- **Type:** Public, educational dataset  
+- **Nature:** Clean, structured, and balanced  
+- **Unit of Analysis:** One row represents one insurance claim  
 
-Type: Public, educational dataset
+### Key Features
 
-Nature: Clean, structured, and balanced
+- Claim amount and claim status  
+- Patient demographics (age, gender, income, employment status)  
+- Provider characteristics (specialty, location)  
+- Claim type and submission method  
+- Claim date for time-based analysis  
 
-Unit of Analysis: One row per insurance claim
+**Note:** This dataset is synthetically generated and does not reflect real-world noise, bias, or extreme cost skew commonly observed in production insurance data.
 
-Key Features
+---
 
-Claim amount and claim status
+## How to Download the Dataset
 
-Patient demographics (age, gender, income, employment status)
+1. Visit the dataset page on Kaggle:  
+   https://www.kaggle.com/datasets/leandrenash/enhanced-health-insurance-claims-dataset
 
-Provider characteristics (specialty, location)
+2. Click **Download** (Kaggle account required)
 
-Claim type and submission method
+3. Extract the dataset and place the CSV file in your working directory
 
-Claim date for time-based analysis
+4. Update the file path in the notebook if required:
 
-⚠️ Note: This dataset is synthetically generated and does not reflect real-world noise, bias, or extreme cost skew commonly found in production insurance data.
-
-⬇️ How to Download the Dataset
-
-Visit the dataset page on Kaggle
-👉 https://www.kaggle.com/datasets/leandrenash/enhanced-health-insurance-claims-dataset?utm_source=chatgpt.com
-
-Click Download (Kaggle account required)
-
-Extract the dataset and place the CSV file in your working directory
-
-Update the file path in the notebook if necessary:
-
+```python
 df = pd.read_csv("health_insurance_claims.csv")
 
-🛠️ Methodology
+--
 
-The analysis followed a structured workflow:
+## Methodology
+The analysis follows a structured and transparent workflow:
 
-Project Framing & Data Understanding
+1. **Project Framing and Data Understanding**
+- Defined analytical objectives and business context
 
-Defined business context and analytical goals
+- Reviewed dataset structure and variable types
 
-Reviewed dataset structure and variable types
+2. **Data Quality Audit**
+- Checked for missing values, duplicates, and invalid entries
 
-Data Quality Audit
+- Validated data types and logical consistency
 
-Checked for missing values, duplicates, and invalid entries
+- Confirmed high initial data quality
 
-Validated data types and logical consistency
+3. **Data Preprocessing**
+- Minimal corrective cleaning due to dataset completeness
 
-Confirmed high initial data quality
+- Standardized categorical variables
 
-Data Preprocessing
+- Feature engineering for segmentation and time-based analysis
 
-Minimal corrective cleaning due to clean dataset
+4. **Exploratory Data Analysis**
+- Univariate analysis of numerical and categorical variables
 
-Standardized categorical formatting
+- Bivariate and multivariate analysis across demographics and claim types
 
-Feature engineering for segmentation and time analysis
+- Time-based analysis of claim volume and average cost
 
-Exploratory Data Analysis (EDA)
+5. **Interpretation and Reporting**
+- Business-oriented interpretation of findings
 
-Univariate analysis of numerical and categorical variables
+- Transparent discussion of dataset limitations
 
-Bivariate and multivariate analysis across demographics and claim types
+## Key Findings
+- Claim amounts are evenly distributed with no extreme cost concentration
 
-Time-based analysis of claim volume and average cost
+- No strong relationship is observed between claim cost and patient demographics
 
-Interpretation & Reporting
+- Claim types exhibit similar cost distributions
 
-Business-focused interpretation of neutral findings
+- Claim volume and average cost remain stable over time
 
-Honest discussion of dataset limitations
+ - Claim outcomes are evenly balanced across approval statuses
 
-📊 Key Findings
+- Overall, the dataset reflects a controlled and standardized claims environment.
 
-Claim amounts are evenly distributed with no extreme cost concentration
+## Business Interpretation
+- From an insurance analytics perspective, these patterns suggest:
 
-No strong relationship exists between claim cost and patient demographics
+- Standardized pricing or capped reimbursement structures
 
-Claim types exhibit similar cost distributions
+- Balanced and consistent claim processing behavior
 
-Claim volume and average cost remain stable over time
+- Limited financial risk concentration
 
-Claim outcomes are evenly balanced across approval statuses
+- Stable operational demand over time
 
-Overall, the dataset reflects a controlled and standardized claims environment.
+- While structurally realistic, the dataset does not provide strong signals for advanced risk stratification or predictive modeling.
 
-🧠 Business Interpretation
+## Limitations
+- The dataset is synthetic and highly balanced
 
-From an insurance analytics perspective, the observed patterns suggest:
+- Real-world insurance data typically exhibits skew, noise, and missing values
 
-Standardized pricing or capped reimbursement structures
+- Weak feature–target relationships limit statistical inference
 
-Balanced claim processing behavior
+- Not suitable for fraud detection or production-grade modeling
 
-Limited financial risk concentration
+- These limitations are acknowledged and discussed throughout the analysis.
 
-Stable operational demand over time
+## Future Work
+- Apply the same analytical framework to real-world insurance datasets
 
-While realistic in structure, the dataset does not support advanced risk stratification or predictive modeling due to limited signal.
+- Perform pricing and risk analysis using datasets with stronger cost drivers
 
-⚠️ Limitations
+- Extend the analysis to predictive modeling where appropriate
 
-The dataset is synthetic and highly balanced
+- Compare synthetic and real-world insurance data behavior
 
-Real-world insurance data typically contains skew, noise, and missingness
+## Repository Contents
+- insurance_claims_eda.ipynb — Main analysis notebook
 
-Weak feature–target relationships limit statistical inference
+- README.md — Project overview and documentation
 
-Not suitable for fraud detection or production-grade modeling
+- data/ — Dataset files (if included)
 
-These limitations are acknowledged and discussed transparently.
+## Portfolio Notes
+- This project is intended as a demonstration of analytical methodology and reporting quality, highlighting:
 
-🚀 Future Work
+- Clean and structured analysis
 
-Apply the same analytical framework to a more complex, real-world dataset
+- Professional documentation
 
-Perform pricing and risk analysis using datasets with stronger cost drivers
+- Honest and transparent interpretation of results
 
-Extend analysis to predictive modeling where appropriate
+- Readiness for more complex data analytics projects
 
-Compare synthetic vs real-world insurance data behavior
-
-📦 Repository Contents
-
-insurance_claims_eda.ipynb – Main analysis notebook
-
-README.md – Project overview and documentation
-
-data/ – Dataset files (if included)
-
-✅ Portfolio Notes
-
-This project is intended as a practice and methodology demonstration, showcasing:
-
-Clean analytical structure
-
-Professional documentation
-
-Honest interpretation of results
-
-Readiness for more complex analytics projects
-
-👤 Author
-
+## Author
 Zahra Abbas
-Data Science Undergraduate | Aspiring Data Analyst
+Data Science Undergraduate
+Aspiring Data Analyst
