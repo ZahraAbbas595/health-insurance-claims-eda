@@ -50,9 +50,7 @@ The focus of this project is on analytical reasoning, transparency, and professi
 
 4. Update the file path in the notebook if required:
 
-```python
 df = pd.read_csv("health_insurance_claims.csv")
-
 --
 
 ## Methodology
