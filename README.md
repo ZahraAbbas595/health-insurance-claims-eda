@@ -157,3 +157,5 @@ Zahra Abbas
 Data Science Undergraduate
 
 Aspiring Data Analyst
+
+NUST 
